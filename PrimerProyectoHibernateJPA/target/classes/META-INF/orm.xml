@@ -5,14 +5,18 @@
 	<entity class="org.primerproyecto.hibernate.jpa.User">
 		<attributes>
 			<id name="id">
+			<generated-value/>
 			</id>
 			<basic name="userName"></basic>
-			<basic name="userMessage"></basic>			
+			<basic name="userMessage"></basic>	
+			<one-to-many name="phones">				
+			</one-to-many>		
 		</attributes>
 	</entity>
 	<entity class="org.primerproyecto.hibernate.jpa.Phone">
 		<attributes>
 			<id name="id">
+			<generated-value/>
 			</id>
 			<basic name="number"></basic>
 			<many-to-one name="user"></many-to-one>
